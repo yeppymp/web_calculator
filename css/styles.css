@@ -1,0 +1,109 @@
+/*
+Created by Yeppy Mangun Puspitajudin
+on Dec 15, 2019
+*/
+
+:root {
+    --casing-color: #262c2f;
+    --shadow-color: #aaa;
+    --btn-height: 50px;
+    --btn-color: #ddd;
+    --btn-radius: 5px;
+    --btn-box-hadow: 0 6px var(--shadow-color);
+    --btn-calc: #ffd267;
+    --btn-calc-shadow: 0 6px #d2a864;
+    --btn-clear: #ff5356;
+    --btn-clear-shadow: 0 6px #d33d3d;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #519dff;
+}
+
+.casing {
+    background-color: var(--casing-color);
+    box-shadow: 4px 8px #202020;
+    border-radius: 20px;
+    padding: 48px 24px 32px 24px;
+    height: auto;
+    width: 350px;
+}
+
+.casing > #display {
+    background-color: var(--btn-color);
+    box-shadow: var(--btn-box-hadow);
+    border-radius: var(--btn-radius);
+    height: var(--btn-height);
+    font-size: 1.75rem;
+    text-align: right;
+    padding: 16px;
+    border: none;
+    width: 100%;
+}
+
+.casing > .row {
+    grid-template-columns: auto auto auto auto;
+    margin: 0 0 16px;
+    display: flex;
+}
+
+.casing > .row > * {
+    margin: 0 8px;
+    border: none;
+    width: 100%;
+}
+
+.casing > .row > *:last-child {
+    margin-right: 0;
+}
+
+.casing > .row > *:first-child {
+    margin-left: 0;
+}
+
+.casing > .row > .btn {
+    background-color: var(--btn-color);
+    border-radius: var(--btn-radius);
+    box-shadow: var(--btn-box-hadow);
+    height: var(--btn-height);
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.casing > .row > .btn:focus {
+    outline: none;
+}
+
+.casing > .row > #btn-calc {
+    background-color: var(--btn-calc);
+    box-shadow: var(--btn-calc-shadow);
+}
+
+.casing > .row > #btn-clear {
+    background-color: var(--btn-clear);
+    box-shadow: var(--btn-clear-shadow);
+}
+
+.copyright {
+    margin-top: 32px;
+    font-size: .85rem;
+}
+.copyright > .heart {
+    color: red;
+}
