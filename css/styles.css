@@ -4,21 +4,24 @@ on Dec 15, 2019
 */
 
 :root {
+    --btn-box-hadow: 0 6px var(--shadow-color);
     --casing-color: #262c2f;
     --shadow-color: #aaa;
     --btn-height: 50px;
     --btn-color: #ddd;
     --btn-radius: 5px;
-    --btn-box-hadow: 0 6px var(--shadow-color);
     --btn-calc: #ffd267;
     --btn-calc-shadow: 0 6px #d2a864;
+    --btn-calc-shadow-pressed: 0 3px #d2a864;
     --btn-clear: #ff5356;
     --btn-clear-shadow: 0 6px #d33d3d;
+    --btn-clear-shadow-pressed: 0 3px #d33d3d;
 }
 
 * {
     box-sizing: border-box;
     font-family: sans-serif;
+    transition: all .25s;
 }
 
 body {
@@ -100,10 +103,22 @@ a {
     box-shadow: var(--btn-clear-shadow);
 }
 
+.casing > .row > .btn.pressed {
+    transform: translateY(3px);
+    box-shadow:  0 3px var(--shadow-color);
+}
+.casing > .row > #btn-clear.pressed:hover {
+    box-shadow: var(--btn-clear-shadow-pressed);
+}
+.casing > .row > #btn-calc.pressed:hover {
+    box-shadow: var(--btn-calc-shadow-pressed);
+}
+
 .copyright {
     margin-top: 32px;
     font-size: .85rem;
 }
+
 .copyright > .heart {
     color: red;
 }
